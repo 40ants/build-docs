@@ -181,10 +181,12 @@ behaviour could be overriden by keyword argument ``:raise t``."
                  (git "config --global user.email \"actions@github.com\""))
                  
                (git "commit -m 'Update docs'")))
-        (cond
-          ((uiop:getenv "GITHUB_HEAD_REF")
-           (let ((ref (uiop:getenv "GITHUB_HEAD_REF")))
-
+        (let ((head-ref (uiop:getenv "GITHUB_HEAD_REF")))
+          (cond
+            ((and head-ref
+                  ;; For push events GITHUB_HEAD_REF env variable
+                  ;; can be present but set to an empty string.
+                  (not (string= head-ref "")))
              ;; Inside github action we are running on
              ;; detached commit. Github takes last commit
              ;; from the "master" branch and merges
@@ -192,17 +194,17 @@ behaviour could be overriden by keyword argument ``:raise t``."
              ;;
              ;; To push changes back, we need to change
              ;; our HEAD back to the pull-request's reference:
-             (git "checkout " ref)
+             (git "checkout " head-ref)
              ;; Here we need to check again if
              (if-there-are-changes
               (make-commit)
               (git "remote add upstream "
                    (get-origin-to-push))
-              (git "push upstream HEAD:" ref))))
-          (t
-           (if-there-are-changes
-            (make-commit)
-            (git "push")))))))
+              (git "push upstream HEAD:" head-ref)))
+            (t
+             (if-there-are-changes
+              (make-commit)
+              (git "push"))))))))
   (values))
 
 
