@@ -2,6 +2,11 @@
  ChangeLog
 ===========
 
+1.0.2 (2020-02-16)
+==================
+
+Yet another fix of pushing changes into the current branch on push event.
+
 1.0.1 (2021-02-16)
 ==================
 
