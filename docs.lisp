@@ -31,7 +31,9 @@ It should be used after the [setup-lisp](https://40ants.com/setup-lisp/) action.
 
 (defsection @typical-usage (:title "A typical usage")
   "
-Here is how a minimal GitHub Workflow might look like:
+Here is how a minimal GitHub Workflow might look like.
+
+Create a `.github/workflows/docs.yml` file with following content:
 
 ```yaml
 name: 'Docs'
