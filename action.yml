@@ -34,7 +34,7 @@ runs:
         set -Eeuo pipefail
         echo ::group::Build Docs
 
-        build-docs ${{ inputs.asdf-system }} output.dir
+        qlot exec build-docs ${{ inputs.asdf-system }} output.dir
 
         echo ::endgroup::
 
