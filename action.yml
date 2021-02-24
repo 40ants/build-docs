@@ -44,7 +44,7 @@ runs:
         set -Eeuo pipefail
         echo ::group::Upload Docs
 
-        ${{ github.action_path }}/upload.ros "$(cat output.dir)"
+        qlot exec ${{ github.action_path }}/upload.ros "$(cat output.dir)"
 
         echo ::endgroup::
       env:
