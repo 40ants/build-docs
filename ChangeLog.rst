@@ -2,10 +2,17 @@
  ChangeLog
 ===========
 
+1.0.3 (2020-02-24)
+==================
+
+Fixed utilities running when cache is enabled.
+We need to call them under the qlot.
+
 1.0.2 (2020-02-16)
 ==================
 
 Yet another fix of pushing changes into the current branch on push event.
+
 
 1.0.1 (2021-02-16)
 ==================
