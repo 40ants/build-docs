@@ -19,6 +19,9 @@ runs:
       run: |
         echo ::group::Install Documentation Builder
 
+        # qlfile might not have a new-line at the end
+        # thus we have to add one just to be sure.
+        echo '' >> qlfile
         echo 'github docs-builder 40ants/docs-builder' >> qlfile
         echo 'github ngrok 40ants/ngrok' >> qlfile
         

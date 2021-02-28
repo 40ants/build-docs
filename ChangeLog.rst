@@ -2,6 +2,11 @@
  ChangeLog
 ===========
 
+1.0.4 (2020-02-28)
+==================
+
+Fixed update of the qlfile in case there is no new line at the end.
+
 1.0.3 (2020-02-24)
 ==================
 
