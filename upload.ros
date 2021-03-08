@@ -82,7 +82,7 @@ behaviour could be overriden by keyword argument ``:raise t``."
   ;; And not in qlfile and qlfile.lock.
   ;; The "cat" at the end is to make 0 status code if there is no changed files.
   ;; Because we only want an output from grep.
-  (> (length (git "status --porcelain=v2 | grep '^1' | grep -v -e qlfile | cat"))
+  (> (length (git "status --porcelain=v2 | grep '^1' | grep -v -e qlfile -e .github/workflows | cat"))
      0))
 
 
@@ -194,7 +194,13 @@ behaviour could be overriden by keyword argument ``:raise t``."
 
                ;; We don't want to commit changes to qlfile,
                ;; because documentation builders might change them:
-               (git "reset qlfile*")
+               (git "reset -- qlfile*")
+
+               ;; If a project can change github workflows
+               ;; during the build, like https://github.com/40ants/ci
+               ;; does, then we need to reset it, because
+               ;; GitHub prohibits workflow changes from the action.
+               (git "reset -- .github/workflows")
                  
                (when (uiop:getenv "GITHUB_ACTIONS")
 

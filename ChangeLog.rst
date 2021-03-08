@@ -2,18 +2,24 @@
  ChangeLog
 ===========
 
-1.0.4 (2020-02-28)
+1.0.5 (2021-03-08)
+==================
+
+Fixed the case when during the docs building
+some file in the ``.github/workflows`` has changed.
+
+1.0.4 (2021-02-28)
 ==================
 
 Fixed update of the qlfile in case there is no new line at the end.
 
-1.0.3 (2020-02-24)
+1.0.3 (2021-02-24)
 ==================
 
 Fixed utilities running when cache is enabled.
 We need to call them under the qlot.
 
-1.0.2 (2020-02-16)
+1.0.2 (2021-02-16)
 ==================
 
 Yet another fix of pushing changes into the current branch on push event.
