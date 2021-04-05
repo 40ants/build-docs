@@ -2,6 +2,12 @@
  ChangeLog
 ===========
 
+1.0.7 (2021-04-05)
+==================
+
+Install ``log4cl-extras`` because docs-builder now depends on it
+and this project is not in the Quicklisp yet.
+
 1.0.6 (2021-04-05)
 ==================
 
