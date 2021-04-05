@@ -1,9 +1,8 @@
 (defpackage #:docs
   (:use #:cl)
   (:nicknames #:docs/docs)
-  (:import-from #:mgl-pax-minimal
-                #:defsection
-                #:section))
+  (:import-from #:40ants-doc
+                #:defsection))
 (in-package docs)
 
 
@@ -25,6 +24,7 @@ It should be used after the [setup-lisp](https://40ants.com/setup-lisp/) action.
 * If any there are any changes, it uploads them into the `gh-pages` branch.
 * Also, it pushes any other changes to the current branch. This way, README.md
   is updated when you are using [MGL-PAX](https://github.com/cl-doc-systems/mgl-pax)
+  or [40ANTS-DOC](https://github.com/40ants/doc)
   as a docs-builder.
 ")
 

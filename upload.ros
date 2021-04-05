@@ -178,7 +178,7 @@ behaviour could be overriden by keyword argument ``:raise t``."
 
 
 (defun push-local-changes ()
-  "Some documentation builders, like MGL-PAX,
+  "Some documentation builders, like MGL-PAX or 40ANTS-DOC
    can update README file as well. In this case, we need
    to push the file into the current branch of the repository."
   (let ((*current-dir* (probe-file #P"")))

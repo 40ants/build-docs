@@ -2,6 +2,11 @@
  ChangeLog
 ===========
 
+1.0.6 (2021-04-05)
+==================
+
+Switched to the 40ANTS-DOC for its own documentation.
+
 1.0.5 (2021-03-08)
 ==================
 
