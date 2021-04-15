@@ -7,6 +7,10 @@ inputs:
   qlfile-template:
     description: "Djula template for qlfile. All environment variables are available in it's context"
     required: false
+  error-on-warnings:
+    description: 'If documentation will generate any warnings, build will fail.'
+    required: false
+    default: true
   ngrok-auth-token:
     description: "A token to debug processes."
     required: false
@@ -38,7 +42,7 @@ runs:
         set -Eeuo pipefail
         echo ::group::Build Docs
 
-        qlot exec build-docs ${{ inputs.asdf-system }} output.dir
+        qlot exec build-docs --error-on-warnings "${{ inputs.error-on-warnings }}" "${{ inputs.asdf-system }}" output.dir
 
         echo ::endgroup::
 

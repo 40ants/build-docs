@@ -2,6 +2,13 @@
  ChangeLog
 ===========
 
+1.1.0 (2021-04-15)
+==================
+
+Now builder will be runned in the mode when any warning
+is considered as an error. To prevent this behaviour,
+pass pass ``error-on-warnings: false`` argument.
+
 1.0.7 (2021-04-05)
 ==================
 
