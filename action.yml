@@ -26,9 +26,18 @@ runs:
         # qlfile might not have a new-line at the end
         # thus we have to add one just to be sure.
         echo '' >> qlfile
-        echo 'github log4cl-extras 40ants/log4cl-extras' >> qlfile
-        echo 'github docs-builder 40ants/docs-builder' >> qlfile
-        echo 'github ngrok 40ants/ngrok' >> qlfile
+
+        if ! grep -q log4cl-extras qlfile; then
+            echo 'github log4cl-extras 40ants/log4cl-extras' >> qlfile
+        fi
+        
+        if ! grep -q docs-builder qlfile; then
+            echo 'github docs-builder 40ants/docs-builder' >> qlfile
+        fi
+
+        if ! grep -q ngrok qlfile; then
+            echo 'github ngrok 40ants/ngrok' >> qlfile
+        fi
         
         qlot update
 

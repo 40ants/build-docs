@@ -2,6 +2,12 @@
  ChangeLog
 ===========
 
+1.2.0 (2021-05-10)
+==================
+
+Now action will check if ``log4cl-extras``, ``docs-builder`` or ``ngrok``
+are present in ``qlfile``.
+
 1.1.0 (2021-04-15)
 ==================
 
