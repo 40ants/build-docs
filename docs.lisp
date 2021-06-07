@@ -6,7 +6,8 @@
 (in-package docs)
 
 
-(defsection @index (:title "GitHub Action to Build Documentation for a Common Lisp Library")
+(defsection @index (:title "GitHub Action to Build Documentation for a Common Lisp Library"
+                    :ignore-words ("HTML"))
   "
 This is a Github Action can be used to build docs and update `gh-pages` branch used to
 host static site using [GitHub Pages](https://pages.github.com/).
