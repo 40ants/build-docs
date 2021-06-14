@@ -18,7 +18,7 @@ It should be used after the [setup-lisp](https://40ants.com/setup-lisp/) action.
 
 ## 1 What this action does for you?
 
-- It runs [docs-builder](https://40ants.com/docs-builder/) to build HTML docs.
+- It runs [docs-builder](https://40ants.com/docs-builder/) to build `HTML` docs.
 
 - If any there are any changes, it uploads them into the `gh-pages` branch.
 
