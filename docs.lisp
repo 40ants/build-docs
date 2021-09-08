@@ -1,13 +1,33 @@
-(defpackage #:docs
+(defpackage #:docs/docs
   (:use #:cl)
-  (:nicknames #:docs/docs)
   (:import-from #:40ants-doc
-                #:defsection))
-(in-package docs)
+                #:defsection
+                #:defsection-copy)
+  (:import-from #:docs-config
+                #:docs-config)
+  (:import-from #:docs/changelog
+                #:@changelog)
+  (:export #:@index
+           #:@readme
+           #:@changelog))
+(in-package docs/docs)
+
+
+(defmethod docs-config ((system (eql (asdf:find-system "docs"))))
+  ;; 40ANTS-DOC-THEME-40ANTS system will bring
+  ;; as dependency a full 40ANTS-DOC but we don't want
+  ;; unnecessary dependencies here:
+  (ql:quickload :40ants-doc-theme-40ants)
+  (list :theme
+        (find-symbol "40ANTS-THEME"
+                     (find-package "40ANTS-DOC-THEME-40ANTS"))))
 
 
 (defsection @index (:title "GitHub Action to Build Documentation for a Common Lisp Library"
-                    :ignore-words ("HTML"))
+                    :ignore-words ("HTML"
+                                   "MGL-PAX"
+                                   "README")
+                    :external-docs ("https://40ants.com/doc/"))
   "
 This is a Github Action can be used to build docs and update `gh-pages` branch used to
 host static site using [GitHub Pages](https://pages.github.com/).
@@ -17,6 +37,9 @@ It should be used after the [setup-lisp](https://40ants.com/setup-lisp/) action.
   (@features section)
   (@typical-usage section)
   (@roadmap section))
+
+
+(defsection-copy @readme @index)
 
 
 (defsection @features (:title "What this action does for you?")
