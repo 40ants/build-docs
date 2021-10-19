@@ -2,6 +2,12 @@
 
 # ChangeLog
 
+<a id="x-28DOCS-2FCHANGELOG-3A-3A-7C1-2E3-2E0-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
+
+## 1.3.0 (2021-10-19)
+
+Don't upload docs when action is used on pull-request.
+
 <a id="x-28DOCS-2FCHANGELOG-3A-3A-7C1-2E2-2E0-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 
 ## 1.2.0 (2021-05-10)
