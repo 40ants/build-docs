@@ -6,6 +6,8 @@
 
 
 (defchangelog ()
+  (1.3.0 2021-10-19
+         "Don't upload docs when action is used on pull-request.")
   (1.2.0 2021-05-10
          "Now action will check if `log4cl-extras`, `docs-builder` or `ngrok`
           are present in `qlfile`.")
