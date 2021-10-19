@@ -236,6 +236,15 @@ behaviour could be overriden by keyword argument ``:raise t``."
 
 
 (defun main (&rest argv)
+  (let ((event-name (uiop:getenv "GITHUB_EVENT_NAME")))
+    (when (and event-name
+               (string-equal event-name "pull_request"))
+      ;; We don't want to upload docs when they are built in pull requests.
+      ;; Only push to master branch should lead to documentation update.
+
+      (log:info "Skipping upload because action is used on pull_request.")
+      (uiop:quit 0)))
+  
   (log:info "Uploading documentation")
 
   (unless argv
