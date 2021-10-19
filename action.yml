@@ -59,7 +59,7 @@ runs:
       shell: bash
       # We don't want to upload docs when they are built in pull requests.
       # Only push to master branch should lead to documentation update.
-      if: ${{ github.event_name == 'pull_request') }}
+      if: ${{ github.event_name != 'pull_request') }}
       run: |
         set -Eeuo pipefail
         echo ::group::Upload Docs
