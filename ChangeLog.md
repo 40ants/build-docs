@@ -34,7 +34,7 @@ and this project is not in the Quicklisp yet.
 
 ## 1.0.6 (2021-04-05)
 
-Switched to the [40ants-doc][a2c7] for its own documentation.
+Switched to the [`40ants-doc`][a2c7] for its own documentation.
 
 <a id="x-28DOCS-2FCHANGELOG-3A-3A-7C1-2E0-2E5-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 

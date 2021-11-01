@@ -17,7 +17,7 @@ It should be used after the [setup-lisp][8de1] action.
 
 * Also, it pushes any other changes to the current branch. This way, `README`.md
   is updated when you are using [`MGL-PAX`][ecfb]
-  or [[40ants-doc][a2c7]][f503]
+  or [[`40ants-doc`][a2c7]][f503]
   as a docs-builder.
 
 <a id="x-28DOCS-2FDOCS-3A-3A-40TYPICAL-USAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
