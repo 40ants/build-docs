@@ -21,7 +21,7 @@ are present in `qlfile`.
 
 Now builder will be runned in the mode when any warning
 is considered as an error. To prevent this behaviour,
-pass `error-on-warnings: false` argument.
+pass `error-on-warnings: false` argument. 
 
 <a id="x-28DOCS-2FCHANGELOG-3A-3A-7C1-2E0-2E7-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 

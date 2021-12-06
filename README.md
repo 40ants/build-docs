@@ -16,8 +16,8 @@ It should be used after the [setup-lisp][8de1] action.
 * If any there are any changes, it uploads them into the `gh-pages` branch.
 
 * Also, it pushes any other changes to the current branch. This way, `README`.md
-  is updated when you are using [`MGL-PAX`][ecfb]
-  or [[`40ants-doc`][a2c7]][f503]
+  is updated when you are using [MGL-PAX][ecfb]
+  or [40ANTS-DOC][f503]
   as a docs-builder.
 
 <a id="x-28DOCS-2FDOCS-3A-3A-40TYPICAL-USAGE-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
@@ -79,7 +79,6 @@ by `docs-builder` and if not, you can easily to add this support.
 * Vendor all dependencies, to make action more reliable and secure.
 
 
-[a2c7]: https://40ants.com/doc/#x-28-23A-28-2810-29-20BASE-CHAR-20-2E-20-2240ants-doc-22-29-20ASDF-2FSYSTEM-3ASYSTEM-29
 [f2be]: https://40ants.com/docs-builder/
 [8de1]: https://40ants.com/setup-lisp/
 [f503]: https://github.com/40ants/doc
