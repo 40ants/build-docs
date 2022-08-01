@@ -21,7 +21,7 @@ runs:
     - name: Checking Commit Message
       shell: bash
       run: |
-        msg = $(git show -s --format='%s')
+        msg=$(git show -s --format='%s')
         if [[ "$msg" == 'Update docs' ]]; then
             echo 'Skipping documentation build because previous commit was documentation update.'
             exit 1
