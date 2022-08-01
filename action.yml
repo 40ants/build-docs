@@ -22,6 +22,8 @@ runs:
       shell: bash
       run: |
         msg=$(git show -s --format='%s')
+        echo "HERE IS MY MESSAGE: $msg"
+
         if [[ "$msg" == 'Update docs' ]]; then
             echo 'Skipping documentation build because previous commit was documentation update.'
             exit 1
