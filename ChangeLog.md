@@ -6,7 +6,11 @@
 
 ## 1.3.1 (2022-08-01)
 
-Don't update docs if there is no changes since last documentation update (latest commit message is "Update docs"). v1.3.1-pre7
+Don't push docs to the github if last commit is last documentation update
+(has commit message is "Update docs").
+
+This way you can set up a scheduled execution for the workflow, and
+ it will not fill git repository with endless updates.
 
 <a id="x-28DOCS-2FCHANGELOG-3A-3A-7C1-2E3-2E0-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 
