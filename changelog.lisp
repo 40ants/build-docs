@@ -7,7 +7,11 @@
 
 (defchangelog ()
   (1.3.1 2022-08-01
-         "Don't update docs if there is no changes since last documentation update (latest commit message is \"Update docs\"). v1.3.1-pre7")
+	"Don't push docs to the github if last commit is last documentation update
+        (has commit message is \"Update docs\").
+
+         This way you can set up a scheduled execution for the workflow, and
+         it will not fill git repository with endless updates.")
   (1.3.0 2021-10-19
          "Don't upload docs when action is used on pull-request.")
   (1.2.0 2021-05-10
