@@ -6,7 +6,7 @@
 
 ## 1.3.1 (2022-08-01)
 
-Don't update docs if there is no changes since last documentation update. 3
+Don't update docs if there is no changes since last documentation update. 4
 
 <a id="x-28DOCS-2FCHANGELOG-3A-3A-7C1-2E3-2E0-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 
