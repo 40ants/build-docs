@@ -7,7 +7,7 @@
 
 (defchangelog ()
   (1.3.1 2022-08-01
-         "Don't update docs if there is no changes since last documentation update. 2")
+         "Don't update docs if there is no changes since last documentation update. 3")
   (1.3.0 2021-10-19
          "Don't upload docs when action is used on pull-request.")
   (1.2.0 2021-05-10
