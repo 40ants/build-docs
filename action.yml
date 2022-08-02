@@ -64,7 +64,6 @@ runs:
 
         if [[ "$msg" == 'Update docs' ]]; then
             echo "Skipping documentation upload, because previous commit was: ${msg}."
-            exit 1
         else
             qlot exec ${{ github.action_path }}/upload.ros "$(cat output.dir)"
         fi
