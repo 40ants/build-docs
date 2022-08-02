@@ -29,7 +29,7 @@ runs:
             exit 1
         fi
     - name: Install Documentation Builder
-      if: ${{ success() }}
+      # if: ${{ success() }}
       shell: bash
       run: |
         echo ::group::Install Documentation Builder
