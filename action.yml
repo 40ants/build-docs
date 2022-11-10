@@ -23,6 +23,8 @@ runs:
       run: |
         echo ::group::Install Documentation Builder
 
+        set -x
+
         # qlfile might not have a new-line at the end
         # thus we have to add one just to be sure.
         echo '' >> qlfile
@@ -39,7 +41,7 @@ runs:
             echo 'github ngrok 40ants/ngrok' >> qlfile
         fi
         
-        qlot update
+        qlot update --no-deps
 
         qlot exec ros install docs-builder
         qlot exec ros install ngrok
