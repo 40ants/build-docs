@@ -6,8 +6,10 @@
 
 
 (defchangelog ()
+  (1.3.2 2022-11-11
+         "Fixed how does .qlot get updated. Now we are running `qlot update --no-deps`.")
   (1.3.1 2022-08-01
-	"Don't push docs to the github if last commit is last documentation update
+         "Don't push docs to the github if last commit is last documentation update
         (has commit message is \"Update docs\").
 
          This way you can set up a scheduled execution for the workflow, and
