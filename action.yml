@@ -21,9 +21,12 @@ runs:
     - name: Install Documentation Builder
       shell: bash
       run: |
+        set -Eeuo pipefail
         echo ::group::Install Documentation Builder
 
-        set -x
+        if [ -n "$ACTIONS_STEP_DEBUG" ]; then
+            set -x
+        fi
 
         # qlfile might not have a new-line at the end
         # thus we have to add one just to be sure.
@@ -40,6 +43,9 @@ runs:
         if ! grep -q ngrok qlfile; then
             echo 'github ngrok 40ants/ngrok' >> qlfile
         fi
+
+        echo "::debug::Qlfile's content"
+        echo "::debug::$(cat qlfile)"
         
         qlot update --no-deps
 
