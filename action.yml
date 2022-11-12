@@ -21,8 +21,9 @@ runs:
     - name: Install Documentation Builder
       shell: bash
       run: |
-        set -Eeuo pipefail
         echo ::group::Install Documentation Builder
+
+        set -Eeuo pipefail
 
         if [ -n "${ACTIONS_STEP_DEBUG:-}" ]; then
             set -x
