@@ -25,11 +25,16 @@ runs:
 
         set -Eeuo pipefail
 
-        if [ -n "${ACTIONS_STEP_DEBUG:-}" ]; then
-            set -x
-            echo "::debug::Current directory is $(pwd):"
-            ls -l
-        fi
+        echo "Current directory is $(pwd):"
+        env | sort -u
+        
+        echo "Current directory is $(pwd):"
+        ls -l
+
+        echo "Qlfile's content START"
+        cat qlfile
+        echo "Qlfile's content END"
+
 
         # qlfile might not have a new-line at the end
         # thus we have to add one just to be sure.
