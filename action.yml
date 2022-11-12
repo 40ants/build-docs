@@ -27,6 +27,8 @@ runs:
 
         if [ -n "${ACTIONS_STEP_DEBUG:-}" ]; then
             set -x
+            echo "::debug::Current directory is $(pwd):"
+            ls -l
         fi
 
         # qlfile might not have a new-line at the end
