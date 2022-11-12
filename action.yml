@@ -24,7 +24,7 @@ runs:
         set -Eeuo pipefail
         echo ::group::Install Documentation Builder
 
-        if [ -n "$ACTIONS_STEP_DEBUG" ]; then
+        if [ -n "${ACTIONS_STEP_DEBUG:-}" ]; then
             set -x
         fi
 
