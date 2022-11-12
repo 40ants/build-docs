@@ -45,8 +45,8 @@ runs:
             echo 'github ngrok 40ants/ngrok' >> qlfile
         fi
 
-        echo "::debug::Qlfile's content"
-        echo "::debug::$(cat qlfile)"
+        echo "Qlfile's content"
+        cat qlfile
         
         qlot update --no-deps
 
