@@ -23,7 +23,20 @@ runs:
       run: |
         echo ::group::Install Documentation Builder
 
-        set -x
+        set -Eeuo pipefail
+
+        if [ -n "${RUNNER_DEBUG:-}" ]; then
+          echo "Environment:"
+          env | sort -u
+        
+          echo "Current directory is $(pwd):"
+          ls -l
+
+          echo "Qlfile's content before modification:"
+          echo "====================================="
+          cat qlfile
+          echo "====================================="
+        fi
 
         # qlfile might not have a new-line at the end
         # thus we have to add one just to be sure.
@@ -40,7 +53,14 @@ runs:
         if ! grep -q ngrok qlfile; then
             echo 'github ngrok 40ants/ngrok' >> qlfile
         fi
-        
+
+        if [ -n "${RUNNER_DEBUG:-}" ]; then
+          echo "Qlfile's content after modification:"
+          echo "===================================="
+          cat qlfile
+          echo "===================================="
+        fi
+  
         qlot update --no-deps
 
         qlot exec ros install docs-builder

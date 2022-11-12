@@ -6,6 +6,8 @@
 
 
 (defchangelog ()
+  (1.3.3 2022-11-12
+         "Now action outputs more debug information when you rerun it with \"Enable debug logging\" option.")
   (1.3.2 2022-11-11
          "Fixed how does .qlot get updated. Now we are running `qlot update --no-deps`.")
   (1.3.1 2022-08-01
