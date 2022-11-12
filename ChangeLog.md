@@ -2,6 +2,18 @@
 
 # ChangeLog
 
+<a id="x-28DOCS-2FCHANGELOG-3A-3A-7C1-2E3-2E3-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
+
+## 1.3.3 (2022-11-12)
+
+Now action outputs more debug information when you rerun it with "Enable debug logging" option.
+
+<a id="x-28DOCS-2FCHANGELOG-3A-3A-7C1-2E3-2E2-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
+
+## 1.3.2 (2022-11-11)
+
+Fixed how does .qlot get updated. Now we are running `qlot update --no-deps`.
+
 <a id="x-28DOCS-2FCHANGELOG-3A-3A-7C1-2E3-2E1-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 
 ## 1.3.1 (2022-08-01)
