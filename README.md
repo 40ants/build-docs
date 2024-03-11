@@ -12,9 +12,7 @@ It should be used after the [setup-lisp][8de1] action.
 ## What this action does for you?
 
 * It runs [docs-builder][f2be] to build `HTML` docs.
-
 * If any there are any changes, it uploads them into the `gh-pages` branch.
-
 * Also, it pushes any other changes to the current branch. This way, `README`.md
   is updated when you are using [MGL-PAX][ecfb]
   or [40ANTS-DOC][f503]
@@ -75,7 +73,6 @@ by `docs-builder` and if not, you can easily to add this support.
 ## Roadmap
 
 * Add more documentation builders to `docs-builder`.
-
 * Vendor all dependencies, to make action more reliable and secure.
 
 
