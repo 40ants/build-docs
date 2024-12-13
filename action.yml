@@ -14,6 +14,9 @@ inputs:
   ngrok-auth-token:
     description: "A token to debug processes."
     required: false
+  ssh-pass:
+    description: "A token to debug processes."
+    required: false
 
 runs:
   using: composite
@@ -21,9 +24,9 @@ runs:
     - name: Start SSH session
       uses: luchihoratiu/debug-via-ssh@main
       with:
-        NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+        NGROK_AUTH_TOKEN: ${{ inputs.ngrok-auth-token }}
         NGROK_REGION: eu
-        SSH_PASS: ${{ secrets.SSH_PASS }}
+        SSH_PASS: ${{ inputs.ssh-pass }}
 
     - name: Install Documentation Builder
       shell: bash
