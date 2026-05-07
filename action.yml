@@ -67,7 +67,7 @@ runs:
         qlot exec ros --eval '(format t "Qlot is here: ~A~%" (ql:where-is-system :qlot))' --quit
 
         # qlot install --no-deps
-        qlot update --no-deps --jobs 1
+        qlot update --no-deps --jobs 1 --debug
 
         echo "Before ros install"
         which qlot
