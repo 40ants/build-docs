@@ -63,7 +63,9 @@ runs:
 
         echo "Before qlot update" 
         which qlot 
-        qlot --version
+        # qlot --version
+        qlot exec ros --eval '(format t "Qlot is here: ~A~%" (ql:where-is-system :qlot))' --quit
+
         qlot update --no-deps
 
         echo "Before ros install"
