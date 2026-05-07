@@ -63,6 +63,7 @@ runs:
 
         echo "Before qlot update" 
         which qlot 
+        qlot --version
         qlot update --no-deps
 
         echo "Before ros install"
