@@ -50,9 +50,9 @@ runs:
             echo 'github docs-builder 40ants/docs-builder' >> qlfile
         fi
 
-        if ! grep -q ngrok qlfile; then
-            echo 'github ngrok 40ants/ngrok' >> qlfile
-        fi
+        # if ! grep -q ngrok qlfile; then
+        #     echo 'github ngrok 40ants/ngrok' >> qlfile
+        # fi
 
         if [ -n "${RUNNER_DEBUG:-}" ]; then
           echo "Qlfile's content after modification:"
@@ -60,11 +60,18 @@ runs:
           cat qlfile
           echo "===================================="
         fi
-  
+
+        echo "Before qlot update" 
+        which qlot 
         qlot update --no-deps
 
+        echo "Before ros install"
+        which qlot
         qlot exec ros install docs-builder
-        qlot exec ros install ngrok
+
+        echo "After ros install"
+        which qlot
+        # qlot exec ros install ngrok
         echo ::endgroup::
     - name: Build Docs
       shell: bash
@@ -72,6 +79,7 @@ runs:
         set -Eeuo pipefail
         echo ::group::Build Docs
 
+        which qlot
         qlot exec build-docs --error-on-warnings "${{ inputs.error-on-warnings }}" "${{ inputs.asdf-system }}" output.dir
 
         echo ::endgroup::
