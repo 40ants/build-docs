@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+    <channel>
+        <title>docs ChangeLog</title>
+        <link>https://40ants.com/build-docs/</link>
+        <generator>xml-emitter</generator>
+        <language>en-us</language>
+        <item>
+            <title>1.3.3  (2022-11-12)</title>
+            <description>&lt;p&gt;Now action outputs more debug information when you rerun it with &amp;quot;Enable debug logging&amp;quot; option.&lt;/p&gt;</description>
+            <pubDate>Sat, 12 Nov 2022 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.3.2  (2022-11-11)</title>
+            <description>&lt;p&gt;Fixed how does .qlot get updated. Now we are running &lt;code&gt;qlot update --no-deps&lt;/code&gt;.&lt;/p&gt;</description>
+            <pubDate>Fri, 11 Nov 2022 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.3.1  (2022-08-01)</title>
+            <description>&lt;p&gt;Don&apos;t push docs to the github if last commit is last documentation update
+(has commit message is &amp;quot;Update docs&amp;quot;).&lt;/p&gt;&lt;p&gt;This way you can set up a scheduled execution for the workflow, and
+ it will not fill git repository with endless updates.&lt;/p&gt;</description>
+            <pubDate>Mon, 01 Aug 2022 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.3.0  (2021-10-19)</title>
+            <description>&lt;p&gt;Don&apos;t upload docs when action is used on pull-request.&lt;/p&gt;</description>
+            <pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.2.0  (2021-05-10)</title>
+            <description>&lt;p&gt;Now action will check if &lt;code&gt;log4cl-extras&lt;/code&gt;, &lt;code&gt;docs-builder&lt;/code&gt; or &lt;code&gt;ngrok&lt;/code&gt;
+are present in &lt;code&gt;qlfile&lt;/code&gt;.&lt;/p&gt;</description>
+            <pubDate>Mon, 10 May 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.1.0  (2021-04-15)</title>
+            <description>&lt;p&gt;Now builder will be runned in the mode when any warning
+is considered as an error. To prevent this behaviour,
+pass &lt;code&gt;error-on-warnings: false&lt;/code&gt; argument. &lt;/p&gt;</description>
+            <pubDate>Thu, 15 Apr 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.0.7  (2021-04-05)</title>
+            <description>&lt;p&gt;Install &lt;code&gt;log4cl-extras&lt;/code&gt; because docs-builder now depends on it
+and this project is not in the Quicklisp yet.&lt;/p&gt;</description>
+            <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.0.6  (2021-04-05)</title>
+            <description>&lt;p&gt;Switched to the &lt;a href=&quot;https://40ants.com/doc/#x-28-23A-28-2810-29-20BASE-CHAR-20-2E-20-2240ants-doc-22-29-20ASDF-2FSYSTEM-3ASYSTEM-29&quot;&gt;&lt;code&gt;40ants-doc&lt;/code&gt;&lt;/a&gt; for its own documentation.&lt;/p&gt;</description>
+            <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.0.5  (2021-03-08)</title>
+            <description>&lt;p&gt;Fixed the case when during the docs building
+some file in the &lt;code&gt;.github/workflows&lt;/code&gt; has changed.&lt;/p&gt;</description>
+            <pubDate>Mon, 08 Mar 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.0.4  (2021-02-28)</title>
+            <description>&lt;p&gt;Fixed update of the qlfile in case there is no new line at the end.&lt;/p&gt;</description>
+            <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.0.3  (2021-02-24)</title>
+            <description>&lt;p&gt;Fixed utilities running when cache is enabled.
+We need to call them under the qlot.&lt;/p&gt;</description>
+            <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.0.2  (2021-02-16)</title>
+            <description>&lt;p&gt;Yet another fix of pushing changes into the current branch on push event.&lt;/p&gt;</description>
+            <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.0.1  (2021-02-16)</title>
+            <description>&lt;p&gt;Fixed error when we are uploading local changes on &amp;quot;push event&amp;quot;.&lt;/p&gt;</description>
+            <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>1.0.0  (2021-01-07)</title>
+            <description>&lt;p&gt;Initial version.&lt;/p&gt;</description>
+            <pubDate>Thu, 07 Jan 2021 00:00:00 +0000</pubDate>
+        </item>
+    </channel>
+</rss>
